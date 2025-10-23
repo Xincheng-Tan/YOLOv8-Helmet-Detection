@@ -38,8 +38,8 @@ pip install -r requirements.txt
 ## Prepare dataset
 如果对**文件存储路径**有修改，请根据自身情况同步修改**代码对应变量**
 
-1. 下载开源数据集 [Safety-Helmet-Wearing-Dataset（SWHD）](https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset)至`./dataset`
-2. 执行`./check.suffix.py`，将`./data/VOC2028/JPEGImages`路径下图片后缀名统一为`jpg`
+1. 下载开源数据集 [Safety-Helmet-Wearing-Dataset（SWHD）](https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset)至`./dataset/`
+2. 执行`./check.suffix.py`，将`./data/VOC2028/JPEGImages/`路径下图片后缀名统一为`jpg`
 3. 执行`./data/gen_data/gen_head_helmet.py`，将**VOC格式（.xml 后缀）的数据集转换成 Darknet格式（.txt 后缀）**、同时进行**数据集分割**
 4. 原 SWHD 数据集只提供`person`（实际为`head`）和`hat`两类标签，如果需要检测`person`、`head`、`helmet`3个类别，则需要**增加对 `person` 的标注**
     1. 下载官方开源权重 [yolov8x.pt、 yolov8l.pt](https://docs.ultralytics.com/zh/models/yolov8/#performance-metrics) 到 `./weights/`
@@ -99,12 +99,12 @@ nc: 3
 names: ['person', 'head', 'helmet']
 ```
 
-4. 执行 `./train.py`，基于官方开源权重 [YOLOv8l.pt](https://docs.ultralytics.com/zh/models/yolov8/#performance-metrics) 进行微调训练。训练结果保存在 `./runs/yolov8l_custom`
+4. 执行 `./train.py`，基于官方开源权重 [YOLOv8l.pt](https://docs.ultralytics.com/zh/models/yolov8/#performance-metrics) 进行微调训练。训练结果保存在 `./runs/yolov8l_custom/`
 <p align="center">
   <img alt="results" src="./doc/results.png" width="98%">
 </p>
 
-5. 将 best.pt 复制到 `.weights/` 下，执行 `./test.py`，测试模型性能。测试结果保存在 `./runs/test`
+5. 将 best.pt 复制到 `./weights/` 下，执行 `./test.py`，测试模型性能。测试结果保存在 `./runs/test/`
 
 ## Demo
 使用 [gradio](https://www.gradio.app/) 构建
