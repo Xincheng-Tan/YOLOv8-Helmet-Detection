@@ -118,3 +118,4 @@ names: ['person', 'head', 'helmet']
 [YOLOv8](https://docs.ultralytics.com/zh/models/yolov8/#performance-metrics)
 [Safety-Helmet-Wearing-Dataset](https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset)
 [Smart_Construction](https://github.com/PeterH0323/Smart_Construction)
+[gradio](https://www.gradio.app/)
