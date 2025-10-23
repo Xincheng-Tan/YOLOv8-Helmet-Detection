@@ -1,0 +1,11 @@
+path: /root/autodl-fs/projects/helmet/Safety_Helmet_Train_dataset/
+
+train: images/train
+val: images/val
+test: images/test
+
+# number of classes
+nc: 3
+
+# class names
+names: ['person', 'head', 'helmet']
