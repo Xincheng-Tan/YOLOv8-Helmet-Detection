@@ -111,7 +111,7 @@ names: ['person', 'head', 'helmet']
 1. 在本地终端执行 `ssh -CNg -L 7860:127.0.0.1:7860 root@10.130.136.14 -p 45262`
     1. 如果在云服务器运行 demo 程序，在本地访问需要进行 **ssh 端口映射（如上）**，参考：[AutoDL 帮助文档](https://www.autodl.com/docs/ssh_proxy/#_3)
     2. 如果需要公网访问，请暴露 demo 程序监听的端口
-2. 执行 `./demo.py`，访问 `127.0.0.1: 7860`
+2. 执行 `./demo.py`，访问 `127.0.0.1:7860`
     1. 如果需要指定检测的类别，修改 `TARGET_CLASSES`。编号对应类别：`0 - person ; 1 - head ; 2 - helmet`
 
 ## Acknowledge
