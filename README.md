@@ -81,7 +81,7 @@ pip install -r requirements.txt
 2. **检查标注文件格式**。每个图片对应的标注文件（.txt 后缀）应该遵循如下规范：
     * 每一行都是一个目标
     * 类别序号从零索引开始编号
-    * 每一行符合 `class  x_center  y_center  width  height` 格式
+    * 每一行符合 `class x_center y_center width height` 格式
     * 坐标值归一化（0到1）
 
 3. 创建训练配置文件 `my_data.yaml`：
@@ -113,3 +113,8 @@ names: ['person', 'head', 'helmet']
     2. 如果需要公网访问，请暴露 demo 程序监听的端口
 2. 执行 `./demo.py`，访问 `127.0.0.1: 7860`
     1. 如果需要指定检测的类别，修改 `TARGET_CLASSES`。编号对应类别：`0 - person ; 1 - head ; 2 - helmet`
+
+## Acknowledge
+[YOLOv8](https://docs.ultralytics.com/zh/models/yolov8/#performance-metrics)
+[Safety-Helmet-Wearing-Dataset](https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset)
+[Smart_Construction](https://github.com/PeterH0323/Smart_Construction)
