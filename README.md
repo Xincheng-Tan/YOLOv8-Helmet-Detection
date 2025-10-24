@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 1. 下载开源数据集 [Safety-Helmet-Wearing-Dataset（SWHD）](https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset)至`./dataset/`
 2. 执行`./check.suffix.py`，将`./data/VOC2028/JPEGImages/`路径下图片后缀名统一为`jpg`
-3. 执行`./data/gen_data/gen_head_helmet.py`，将**VOC格式（.xml 后缀）的数据集转换成 Darknet格式（.txt 后缀）**、同时进行**数据集分割**
+3. 执行`./data/gen_data/gen_head_helmet.py`，将**VOC格式（.xml 后缀）的数据集转换成 Darknet格式（.txt 后缀）**、同时进行**数据集分割**。转换过程中将归一化后的坐标值位数限制为**小数点后六位**
 4. 原 SWHD 数据集只提供`person`（实际为`head`）和`hat`两类标签，如果需要检测`person`、`head`、`helmet`3个类别，则需要**增加对 `person` 的标注**
     1. 下载官方开源权重 [yolov8x.pt、 yolov8l.pt](https://docs.ultralytics.com/zh/models/yolov8/#performance-metrics) 到 `./weights/`
     2. 执行`./data/gen_data/gen_person.py`，使用 yolov8x.pt 对 SWHD 数据集进行检测，保存 `person` 类别的检测结果
